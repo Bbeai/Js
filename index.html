@@ -6,22 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uso de JS</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Slabo+27px&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="contenedor">
       <form action="" class="formulario" id="formulario">
-        <input type="text" name="nombre" placeholder="Nombre" />
-        <input type="text" name="correo" placeholder="Correo" />
+        <div class="contenedor-inputs">
+          <input type="text" name="nombre" placeholder="Nombre" />
+          <input type="email" name="correo" placeholder="Correo" />
 
-        <div class="sexo">
-          <input type="radio" name="sexo" id="hombre" value="hombre" />
-          <!--Los labels se unen a los input con los id-->
-          <label for="hombre">Hombre</label>
+          <div class="sexo">
+            <input type="radio" name="sexo" id="hombre" value="hombre" />
+            <!--Los labels se unen a los input con los id-->
+            <label for="hombre" class="label-radio hombre">Hombre</label>
 
-          <input type="radio" name="sexo" id="mujer" value="mujer" />
-          <label for="mujer">Mujer</label>
+            <input type="radio" name="sexo" id="mujer" value="mujer" />
+            <label for="mujer" class="label-radio mujer">Mujer</label>
+          </div>
+          <div class="terminos">
+            <input type="checkbox" name="terminos" id="terminos" />
+            <label for="terminos">Acepto terminos y condiciones</label>
+          </div>
+          <!--los mensajes de validacion son listas-->
+          <ul class="error"></ul>
         </div>
+        <input type="submit" class="btn" value="Reistrate" />
       </form>
     </div>
     <script src="js/acciones.js"></script>
