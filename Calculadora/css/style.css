@@ -7,5 +7,49 @@
 .calculadora {
   width: 400px;
   height: 600px;
-  background: #615756;
+  background: #4550f4;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: 130px repeat (6, 80px);
+  justify-content: center;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+.calculadora button {
+  font-size: 1.3rem;
+  background: rgb(238, 130, 238);
+  border-radius: 25px;
+  border: 2px solid #000;
+  margin: 3px;
+}
+
+.calculadora button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.display {
+  height: 120px;
+  background: rgba(255, 255, 255, 0.4);
+  grid-column: 1/-1; /*se coloca en todo el ancho, pero 
+  sobre los botones*/
+  border: 2px solid #000;
+  text-align: right;
+  padding: 10px 10px;
+}
+
+.span2 {
+  grid-column: span 2; /*abarca dos columnas*/
+}
+
+.valor-superior {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.valor-inferior {
+  color: #fff;
+  font-size: 2rem;
 }
